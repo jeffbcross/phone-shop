@@ -1,1 +1,4 @@
-{{ phone$ | async | json}}
+<a [routerLink]="['../']">&laquo; All Phones</a>
+<div class="phone" *ngIf="(phone$ | async) as phone">
+  <h1>{{ phone.name }}</h1>
+</div>
