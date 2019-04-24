@@ -7,13 +7,16 @@ import {
   featurePhonesRoutes
 } from '@tuskphone/feature-phones';
 import { RouterModule } from '@angular/router';
-import { PhonesComponent } from '@tuskphone/feature-phones';
+import { PhonesComponent, PhoneDetailComponent } from '@tuskphone/feature-phones';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, FeaturePhonesModule, RouterModule.forRoot([{
     path: 'phones',
     component: PhonesComponent
+  },{
+    path: 'phones/:id',
+    component: PhoneDetailComponent
   },{
     path: '',
     pathMatch: 'full',
