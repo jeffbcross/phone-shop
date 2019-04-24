@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@tuskphone/feature-phones": ["libs/feature-phones/src/index.ts"]
+      "@tuskphone/feature-phones": ["libs/feature-phones/src/index.ts"],
+      "@tuskphone/data-access-interfaces": [
+        "libs/data-access-interfaces/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

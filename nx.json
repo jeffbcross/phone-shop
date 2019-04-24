@@ -19,6 +19,9 @@
     },
     "phone-service": {
       "tags": []
+    },
+    "data-access-interfaces": {
+      "tags": []
     }
   }
 }

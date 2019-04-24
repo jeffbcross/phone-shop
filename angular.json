@@ -26,9 +26,7 @@
               "apps/phone-shop/src/favicon.ico",
               "apps/phone-shop/src/assets"
             ],
-            "styles": [
-              "apps/phone-shop/src/styles.scss"
-            ],
+            "styles": ["apps/phone-shop/src/styles.scss"],
             "scripts": [],
             "es5BrowserSupport": true
           },
@@ -84,9 +82,7 @@
               "apps/phone-shop/tsconfig.app.json",
               "apps/phone-shop/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "test": {
@@ -121,9 +117,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/phone-shop-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -141,9 +135,7 @@
               "libs/feature-phones/tsconfig.lib.json",
               "libs/feature-phones/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "test": {
@@ -174,9 +166,7 @@
             "outputPath": "dist/apps/phone-service",
             "main": "apps/phone-service/src/main.ts",
             "tsConfig": "apps/phone-service/tsconfig.app.json",
-            "assets": [
-              "apps/phone-service/src/assets"
-            ]
+            "assets": ["apps/phone-service/src/assets"]
           },
           "configurations": {
             "production": {
@@ -201,13 +191,29 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/phone-service/tsconfig.app.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["apps/phone-service/tsconfig.app.json"],
+            "exclude": ["**/node_modules/**"]
           }
+        }
+      }
+    },
+    "data-access-interfaces": {
+      "root": "libs/data-access-interfaces",
+      "sourceRoot": "libs/data-access-interfaces/src",
+      "projectType": "library",
+      "prefix": "tuskphone",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["libs/data-access-interfaces/tsconfig.lib.json"],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
         }
       }
     }
