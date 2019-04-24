@@ -16,6 +16,9 @@
     },
     "feature-phones": {
       "tags": []
+    },
+    "phone-service": {
+      "tags": []
     }
   }
 }
