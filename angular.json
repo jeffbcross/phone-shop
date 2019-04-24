@@ -120,6 +120,37 @@
           }
         }
       }
+    },
+    "feature-phones": {
+      "root": "libs/feature-phones",
+      "sourceRoot": "libs/feature-phones/src",
+      "projectType": "library",
+      "prefix": "tuskphone",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/feature-phones/tsconfig.lib.json",
+              "libs/feature-phones/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/feature-phones/jest.config.js",
+            "tsConfig": "libs/feature-phones/tsconfig.spec.json",
+            "setupFile": "libs/feature-phones/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

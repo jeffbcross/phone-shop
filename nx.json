@@ -13,6 +13,9 @@
     },
     "phone-shop-e2e": {
       "tags": []
+    },
+    "feature-phones": {
+      "tags": []
     }
   }
 }
