@@ -3,8 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {
-  FeaturePhonesModule,
-  featurePhonesRoutes
+  FeaturePhonesModule
 } from '@tuskphone/feature-phones';
 import { RouterModule } from '@angular/router';
 import { PhonesComponent, PhoneDetailComponent } from '@tuskphone/feature-phones';
