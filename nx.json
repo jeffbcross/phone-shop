@@ -1,0 +1,18 @@
+{
+  "npmScope": "tuskphone",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "phone-shop": {
+      "tags": []
+    },
+    "phone-shop-e2e": {
+      "tags": []
+    }
+  }
+}
