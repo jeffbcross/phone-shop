@@ -1,8 +1,21 @@
 import { Injectable } from '@nestjs/common';
+import {Phone} from '@tuskphone/data-access-interfaces';
+
+const phones = [{
+  name: 'Awesome Flip Phone',
+  id: '1c'
+}, {
+  name: 'Cheap Phone',
+  id: '1d'
+}];
 
 @Injectable()
 export class AppService {
-  getData(): { message: string } {
-    return ({ message: 'Welcome to phone-service!' });
+  getAllPhones(): Phone[] {
+    return phones;
+  }
+
+  getPhoneById(id: string): Phone {
+    return phones.find((phone: Phone) => phone.id === id);
   }
 }

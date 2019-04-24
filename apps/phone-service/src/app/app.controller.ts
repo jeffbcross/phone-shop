@@ -1,5 +1,5 @@
-import { Controller, Get } from '@nestjs/common';
-
+import { Controller, Get, Param } from '@nestjs/common';
+import { Phone } from '@tuskphone/data-access-interfaces';
 import { AppService } from './app.service';
 
 @Controller()
@@ -7,10 +7,12 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get('phones')
-  getData() {
-    return [{
-      id: '1b',
-      name: 'Super Flip Phone'
-    }];
+  getData(): Phone[] {
+    return this.appService.getAllPhones();
+  }
+
+  @Get('phones/:id')
+  getPhone(@Param() params: any): Phone {
+    return this.appService.getPhoneById(params.id);
   }
 }
