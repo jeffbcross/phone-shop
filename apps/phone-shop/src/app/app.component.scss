@@ -1,0 +1,15 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(26, 23, 23, 0.8);
+    color: white;
+}
+
+.content {
+    margin: 100px auto;
+    width: 80em;
+}

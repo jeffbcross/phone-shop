@@ -1,3 +1,5 @@
-<div *ngFor="let phone of phones$ | async">
-  <a [routerLink]="[phone.id]">{{phone.name}}</a>
+<div fxLayout="row wrap" fxLayoutAlign="space-around">
+  <div fxLayout="column" class="phone-tile" *ngFor="let phone of phones$ | async">
+    <a [routerLink]="[phone.id]">{{phone.name}}</a>
+  </div>
 </div>
