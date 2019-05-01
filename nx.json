@@ -22,6 +22,9 @@
     },
     "data-access-interfaces": {
       "tags": []
+    },
+    "user-data": {
+      "tags": []
     }
   }
 }

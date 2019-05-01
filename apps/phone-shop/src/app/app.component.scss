@@ -1,13 +1,64 @@
+$nav-color: #2e2e2e;
+
 .nav {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(26, 23, 23, 0.8);
+    background-color: $nav-color;
     color: white;
 }
 
 .content {
     margin: 100px auto;
     width: 80em;
+}
+
+$user-info-width: 130px;
+
+.user-info {
+    width: $user-info-width;
+
+    button {
+        width: 70px;
+    }
+}
+
+.user-icon {
+    min-width: 40px;
+    max-height: 40px;
+    border-radius: 3px;
+    margin-top: 7px;
+    margin-right: 7px;
+}
+.icon-loaded {
+    background-color: lightyellow;
+}
+// pre-render placeholder animation
+.ghost-display {
+    border-radius: 3px;
+    padding: 12px;
+    width: $user-info-width;
+}
+
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -130px 0
+    }
+    100%{
+        background-position: 130px 0
+    }
+}
+
+.animated-background {
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: $nav-color;
+    background: linear-gradient(to right, $nav-color 8%, #595959 18%, $nav-color 33%);
+    height: 12px;
+    width: 500px;
+    position: relative;
 }

@@ -18,7 +18,8 @@
       "@tuskphone/feature-phones": ["libs/feature-phones/src/index.ts"],
       "@tuskphone/data-access-interfaces": [
         "libs/data-access-interfaces/src/index.ts"
-      ]
+      ],
+      "@tuskphone/user-data": ["libs/user-data/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

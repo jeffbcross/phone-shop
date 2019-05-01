@@ -216,6 +216,36 @@
           "styleext": "scss"
         }
       }
+    },
+    "user-data": {
+      "root": "libs/user-data",
+      "sourceRoot": "libs/user-data/src",
+      "projectType": "library",
+      "prefix": "tuskphone",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/user-data/tsconfig.lib.json",
+              "libs/user-data/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/user-data/jest.config.js",
+            "tsConfig": "libs/user-data/tsconfig.spec.json"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {
