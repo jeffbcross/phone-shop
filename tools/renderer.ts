@@ -39,14 +39,13 @@ async function render(page, ngFactory, moduleMap) {
 
   const outputPath = path.join(
     __dirname,
-    '../../',
+    '../dist/',
     'apps/phone-shop',
     page.destination
   );
-
   mkdirp.sync(path.join(outputPath, '../'));
   fs.writeFileSync(outputPath, result);
-  console.log('Rendered', page.route, 'to', outputPath);
+  console.log('wrote the file');
 }
 
 type Page =
@@ -64,7 +63,7 @@ type Page =
   const pages: Page[] = [
     {
       route: '/',
-      destination: 'index.html'
+      destination: 'index-rendered.html'
     }
     // '/contact-us',
     // '/services',
@@ -86,5 +85,12 @@ type Page =
 
   await Promise.all(
     pages.map(page => render(page, AppServerModuleNgFactory, LAZY_MODULE_MAP))
+  ).then(
+    v => {
+      console.log('things went well', v);
+    },
+    e => {
+      console.error('things did not go well', e);
+    }
   );
 })();
