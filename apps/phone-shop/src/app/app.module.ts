@@ -8,6 +8,7 @@ import {
 import { RouterModule } from '@angular/router';
 import { PhonesComponent, PhoneDetailComponent } from '@tuskphone/feature-phones';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +16,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     BrowserModule, 
     FeaturePhonesModule,
     MatToolbarModule,
+    FlexLayoutModule,
     RouterModule.forRoot([{
       path: 'phones',
       component: PhonesComponent

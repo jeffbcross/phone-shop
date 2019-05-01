@@ -46,6 +46,7 @@
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
+    "ts-jest": "24.0.0",
     "@nestjs/schematics": "5.11.2",
     "@nestjs/testing": "5.5.0",
     "jest-preset-angular": "7.0.0",

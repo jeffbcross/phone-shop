@@ -4,3 +4,8 @@ export interface Phone {
   imgSrc?: string;
   pricingOptions?: any
 }
+
+export interface User {
+  name: string;
+  goodCredit: boolean;
+}
