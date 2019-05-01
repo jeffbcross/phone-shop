@@ -1,4 +1,19 @@
 <a [routerLink]="['../']">&laquo; All Phones</a>
-<div class="phone" *ngIf="(phone$ | async) as phone">
-  <h1>{{ phone.name }}</h1>
+<div class="phone-detail" fxLayout="row" fxLayoutAlign="space-evenly" fxLayoutGap="32px" *ngIf="(phone$ | async) as phone">
+  <div class="phone-detail-image">
+    <img src="assets/{{phone.imgSrc}}">
+  </div>
+  <div class="phone-detail-info">
+    <h1>{{phone.name}}</h1>
+    <h3>Description</h3>
+    <p>It's a phone that does phone things.</p>
+
+    <mat-divider></mat-divider>
+
+    <div class="pricing">
+        <h3>Pricing Options</h3>
+      <p><strong>Full Price:</strong> ${{phone.pricingOptions.total}}</p>
+      <p><strong>Monthly Price:</strong> ${{phone.pricingOptions.monthly}}</p>
+    </div>
+  </div>
 </div>

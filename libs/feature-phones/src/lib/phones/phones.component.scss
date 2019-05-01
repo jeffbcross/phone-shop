@@ -4,4 +4,11 @@
     border: 1px solid lightgray;
     align-items: center;
     margin-bottom: 20px;
+    padding: 20px;
+    flex: 0 1 calc(33.3% - 32px);
+}
+
+.phone-img {
+    width: 135px;
+    margin-bottom: 15px;
 }

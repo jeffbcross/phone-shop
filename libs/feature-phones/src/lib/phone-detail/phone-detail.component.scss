@@ -1,0 +1,22 @@
+.phone-detail {
+  margin-top: 50px;
+}
+
+.phone-detail-image {
+  img {
+    width: 300px;
+  }
+}
+
+.phone-detail-info {
+  width: 350px;
+
+  mat-divider {
+    margin: 40px 0;
+    color: lightgray;
+  }
+
+  h1 {
+    margin-bottom: 50px;
+  }
+}
