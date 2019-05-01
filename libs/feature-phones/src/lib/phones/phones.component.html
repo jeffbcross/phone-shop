@@ -1,5 +1,6 @@
-<div fxLayout="row wrap" fxLayoutAlign="space-around">
+<div fxLayout="row wrap" fxLayoutAlign="space-around" class="phone-list">
   <div fxLayout="column" class="phone-tile" *ngFor="let phone of phones$ | async">
+    <img class="phone-img" src="assets/{{phone.imgSrc || placeholder-mobile.jpg}}">
     <a [routerLink]="[phone.id]">{{phone.name}}</a>
   </div>
 </div>
