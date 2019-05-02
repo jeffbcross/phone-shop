@@ -1,7 +1,7 @@
 <div class="mat-body">
     <mat-toolbar class="nav" fxLayout="row" fxLayoutAlign="space-between">
         <div fxFlexAlign="center">Phone Shop</div>
-        <div class="user-info" fxLayout="row" *ngIf="isBrowser; else ghostDisplay">
+        <div class="user-info" fxLayout="row" fxFlexAlign="center" *ngIf="isBrowser; else ghostDisplay" [@fadeIn]>
             <div class="user-icon icon-loaded"></div>
             <div fxLayout="column">
                 Hi, {{currentUser ? currentUser.name : 'Guest'}}!
@@ -9,9 +9,12 @@
             </div>
         </div>
         <ng-template #ghostDisplay>
-            <div class="ghost-display" fxLayout="column" fxLayoutAlign="space-around">
-                <div class="animated-background"></div>
-                <div class="animated-background"></div>
+            <div class="ghost-display" [@fadeIn]>
+                <div class="animated-background" fxLayout="column">
+                    <div class="background-mask mask-top"></div>
+                    <div class="background-mask mask-gap"></div>
+                    <div class="background-mask mask-bottom"></div>
+                </div>
             </div>
         </ng-template>
     </mat-toolbar>

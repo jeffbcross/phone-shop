@@ -18,7 +18,7 @@ $user-info-width: 130px;
 
 .user-info {
     width: $user-info-width;
-
+    margin-right: 8px;
     button {
         width: 70px;
     }
@@ -35,30 +35,53 @@ $user-info-width: 130px;
     background-color: lightyellow;
 }
 // pre-render placeholder animation
+// for more details on this, refer to:
+//  https://cloudcannon.com/deconstructions/2014/11/15/facebook-content-placeholder-deconstruction.html
 .ghost-display {
     border-radius: 3px;
-    padding: 12px;
-    width: $user-info-width;
+    padding: 10px;
+    width: 140px;
+    min-height: 70%;
 }
 
 @keyframes placeHolderShimmer{
     0%{
-        background-position: -130px 0
+        background-position: -468px 0
     }
     100%{
-        background-position: 130px 0
+        background-position: 468px 0
     }
 }
 
 .animated-background {
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-name: placeHolderShimmer;
     animation-timing-function: linear;
     background: $nav-color;
-    background: linear-gradient(to right, $nav-color 8%, #595959 18%, $nav-color 33%);
-    height: 12px;
-    width: 500px;
+    background: linear-gradient(to right, #4e4e4e 8%, $nav-color 18%, #4e4e4e 33%);
+    background-size: 800px 104px;
+    height: 100%;
     position: relative;
+}
+
+.background-mask {
+    background: $nav-color;
+    position: absolute;
+    left: 50px;
+    height: 18px;
+    width: 10px;
+
+    &.mask-top {
+        top: 0;
+    }
+    &.mask-gap {
+        top: 18px;
+        height: 13px;
+        width: calc(100% - 30px);
+    }
+    &.mask-bottom {
+        bottom: 0;
+    }
 }

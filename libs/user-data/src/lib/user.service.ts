@@ -10,8 +10,8 @@ const someUser: User = {
   providedIn: 'root'
 })
 export class UserService {
-  isLoggedIn = false;
-  currentUser: User;
+  isLoggedIn = true;
+  currentUser = someUser;
 
   logInOut() {
     this.isLoggedIn = !this.isLoggedIn;
