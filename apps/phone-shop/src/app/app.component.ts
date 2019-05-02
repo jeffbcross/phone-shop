@@ -21,13 +21,14 @@ import { isPlatformBrowser } from '@angular/common';
 export class AppComponent {
   title = "phone-shop";
   currentUser: User;
-  isBrowser: boolean;
+  isBrowser: boolean = false;
 
   constructor(
     private readonly userService: UserService,
     @Inject(PLATFORM_ID) private platformId: any
   ) {
-    this.isBrowser = isPlatformBrowser(platformId);
+    setTimeout(()=>{this.isBrowser = true}, 3000);
+    // this.isBrowser = isPlatformBrowser(platformId);
     this.currentUser = this.userService.getCurrentUser();    
   }
 

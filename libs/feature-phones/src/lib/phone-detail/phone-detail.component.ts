@@ -26,13 +26,14 @@ export class PhoneDetailComponent {
     map(params => params.id),
     switchMap(id => this.http.get<Phone>(`/api/phones/${id}`))
   );
-  isBrowser: boolean;
+  isBrowser: boolean = false;
 
   constructor(
     private http: HttpClient,
     private activatedRoute: ActivatedRoute,
     @Inject(PLATFORM_ID) private readonly platformId: any
   ) {
-    this.isBrowser = isPlatformBrowser(platformId);
+    setTimeout(()=>{this.isBrowser=true;}, 3000);
+    // this.isBrowser = isPlatformBrowser(platformId);
   }
 }

@@ -1,11 +1,11 @@
 <div class="mat-body">
     <mat-toolbar class="nav" fxLayout="row" fxLayoutAlign="space-between">
         <div fxFlexAlign="center">Phone Shop</div>
-        <div class="user-info" fxLayout="row" fxFlexAlign="center" *ngIf="isBrowser; else ghostDisplay" [@fadeIn]>
+        <div class="user-info" fxLayout="row" fxFlexAlign="center" >
             <div class="user-icon icon-loaded"></div>
             <div fxLayout="column">
-                Hi, {{currentUser ? currentUser.name : 'Guest'}}!
-                <button (click)="toggleLogIn()">{{currentUser ? 'Logout': 'Login'}}</button>
+                Hi, {{isBrowser ? currentUser.name : 'Guest'}}!
+                <button (click)="toggleLogIn()">{{isBrowser ? 'Logout': 'Login'}}</button>
             </div>
         </div>
         <ng-template #ghostDisplay>

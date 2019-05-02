@@ -5,15 +5,15 @@
   </div>
   <div class="phone-detail-info">
     <h1>{{phone.name}}</h1>
-    <h3>Description</h3>
-    <p>It's a phone that does phone things.</p>
-
-    <mat-divider></mat-divider>
-
-    <div class="pricing" *ngIf="isBrowser" [@slideIn]>
+    
+<div class="pricing" *ngIf="isBrowser">
         <h3>Financing Options</h3>
       <p><strong>Full Price:</strong> ${{phone.pricingOptions.total}}</p>
       <p><strong>Monthly Price:</strong> ${{phone.pricingOptions.monthly}}</p>
     </div>
+    <mat-divider></mat-divider>
+
+    <h3>Description</h3>
+    <p>It's a phone that does phone things.</p>
   </div>
 </div>
