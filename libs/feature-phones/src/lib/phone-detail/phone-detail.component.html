@@ -10,8 +10,8 @@
 
     <mat-divider></mat-divider>
 
-    <div class="pricing">
-        <h3>Pricing Options</h3>
+    <div class="pricing" *ngIf="isBrowser" [@slideIn]>
+        <h3>Financing Options</h3>
       <p><strong>Full Price:</strong> ${{phone.pricingOptions.total}}</p>
       <p><strong>Monthly Price:</strong> ${{phone.pricingOptions.monthly}}</p>
     </div>
