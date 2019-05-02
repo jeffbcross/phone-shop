@@ -60,20 +60,18 @@ type Page =
   const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require(path.resolve(
     './dist/phone-shop-server/main'
   ));
-  const pages: Page[] = [
-    {
-      route: '/',
-      destination: 'index-rendered.html'
-    }
-    // '/contact-us',
-    // '/services',
-    // '/team',
-    // '/community',
-    // '/nx',
-    // '/products',
-    // '/careers',
-    // '/connect'
-  ];
+
+  const pages: Page[] = ['1a', '1b', '2a', '2b', '3a', '4a']
+    .map(id => ({
+      route: `/phones/${id}`,
+      destination: `phone-${id}.html`
+    }))
+    .concat([
+      {
+        route: '/phones',
+        destination: 'phones-rendered.html'
+      }
+    ]);
 
   console.log(
     '🐋 The following pages will be prerendered: \n',

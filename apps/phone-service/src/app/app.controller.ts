@@ -6,12 +6,12 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get('phones')
+  @Get('api/phones')
   getData(): Phone[] {
     return this.appService.getAllPhones();
   }
 
-  @Get('phones/:id')
+  @Get('api/phones/:id')
   getPhone(@Param() params: any): Phone {
     return this.appService.getPhoneById(params.id);
   }

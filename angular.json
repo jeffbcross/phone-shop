@@ -26,9 +26,7 @@
               "apps/phone-shop/src/favicon.ico",
               "apps/phone-shop/src/assets"
             ],
-            "styles": [
-              "apps/phone-shop/src/styles.scss"
-            ],
+            "styles": ["apps/phone-shop/src/styles.scss"],
             "scripts": [],
             "es5BrowserSupport": true
           },
@@ -84,9 +82,7 @@
               "apps/phone-shop/tsconfig.app.json",
               "apps/phone-shop/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "test": {
@@ -144,9 +140,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/phone-shop-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -164,9 +158,7 @@
               "libs/feature-phones/tsconfig.lib.json",
               "libs/feature-phones/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "test": {
@@ -194,12 +186,10 @@
         "build": {
           "builder": "@nrwl/builders:node-build",
           "options": {
-            "outputPath": "dist/apps/phone-service",
+            "outputPath": "functions/src/modules",
             "main": "apps/phone-service/src/main.ts",
             "tsConfig": "apps/phone-service/tsconfig.app.json",
-            "assets": [
-              "apps/phone-service/src/assets"
-            ]
+            "assets": ["apps/phone-service/src/assets"]
           },
           "configurations": {
             "production": {
@@ -224,12 +214,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/phone-service/tsconfig.app.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["apps/phone-service/tsconfig.app.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -243,12 +229,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "libs/data-access-interfaces/tsconfig.lib.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["libs/data-access-interfaces/tsconfig.lib.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       },
