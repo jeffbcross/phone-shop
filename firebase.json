@@ -1,0 +1,46 @@
+{
+  "hosting": {
+    "public": "dist/apps/phone-shop",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "/api/**",
+        "function": "api"
+      },
+      {
+        "source": "/phones/1a",
+        "destination": "/phone-1a.html"
+      },
+      {
+        "source": "/phones/1b",
+        "destination": "/phone-1b.html"
+      },
+      {
+        "source": "/phones/2a",
+        "destination": "/phone-2a.html"
+      },
+      {
+        "source": "/phones/2b",
+        "destination": "/phone-2b.html"
+      },
+      {
+        "source": "/phones/3a",
+        "destination": "/phone-3a.html"
+      },
+      {
+        "source": "/phones/4a",
+        "destination": "/phone-4a.html"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "functions": {
+    "predeploy": [
+      "npm --prefix \"$RESOURCE_DIR\" run lint",
+      "npm --prefix \"$RESOURCE_DIR\" run build"
+    ]
+  }
+}

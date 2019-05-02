@@ -92,6 +92,29 @@
             "tsConfig": "apps/phone-shop/tsconfig.spec.json",
             "setupFile": "apps/phone-shop/src/test-setup.ts"
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/phone-shop-server",
+            "main": "apps/phone-shop/src/main.server.ts",
+            "tsConfig": "apps/phone-shop/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/phone-shop/src/environments/environment.ts",
+                  "with": "apps/phone-shop/src/environments/environment.prod.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": {
+                "scripts": false,
+                "styles": true
+              }
+            }
+          }
         }
       }
     },
@@ -163,7 +186,7 @@
         "build": {
           "builder": "@nrwl/builders:node-build",
           "options": {
-            "outputPath": "dist/apps/phone-service",
+            "outputPath": "functions/src/modules",
             "main": "apps/phone-service/src/main.ts",
             "tsConfig": "apps/phone-service/tsconfig.app.json",
             "assets": ["apps/phone-service/src/assets"]

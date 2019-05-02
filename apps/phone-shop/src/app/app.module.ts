@@ -13,7 +13,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    BrowserModule, 
+    BrowserModule.withServerTransition({ appId: 'serverApp' }), 
     FeaturePhonesModule,
     MatToolbarModule,
     FlexLayoutModule,
