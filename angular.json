@@ -36,6 +36,10 @@
                 {
                   "replace": "apps/phone-shop/src/environments/environment.ts",
                   "with": "apps/phone-shop/src/environments/environment.prod.ts"
+                },
+                {
+                  "replace": "libs/feature-phones/src/lib/environment.ts",
+                  "with": "libs/feature-phones/src/lib/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -106,6 +110,10 @@
                 {
                   "replace": "apps/phone-shop/src/environments/environment.ts",
                   "with": "apps/phone-shop/src/environments/environment.prod.ts"
+                },
+                {
+                  "replace": "libs/feature-phones/src/lib/environment.ts",
+                  "with": "libs/feature-phones/src/lib/environment.prod.ts"
                 }
               ],
               "sourceMap": false,

@@ -6,6 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { Phone } from '@tuskphone/data-access-interfaces';
 import { isPlatformBrowser } from '@angular/common';
+import { API_URL } from '../environment';
 
 
 @Component({
@@ -24,7 +25,7 @@ import { isPlatformBrowser } from '@angular/common';
 export class PhoneDetailComponent {
   phone$ = this.activatedRoute.params.pipe(
     map(params => params.id),
-    switchMap(id => this.http.get<Phone>(`/api/phones/${id}`))
+    switchMap(id => this.http.get<Phone>(`${API_URL}/phones/${id}`))
   );
   isBrowser: boolean;
 
